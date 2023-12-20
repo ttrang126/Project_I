@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=NetR5_2 Pin=U2-1
+Removed Pin From Net: NetName=NetR3_2 Pin=U2-2
+Removed Pin From Net: NetName=NetR1_1 Pin=U2-3
+Removed Pin From Net: NetName=GND Pin=U2-4
+Removed Pin From Net: NetName=V_PT100 Pin=U3-1
+Removed Pin From Net: NetName=NetR6_2 Pin=U3-2
+Removed Pin From Net: NetName=NetR5_2 Pin=U3-3
+Removed Member From Class: ClassName=Schematic_new Member=U3
+Change Component Designator: OldDesignator=U3 NewDesignator=U2
+Added Pin To Net: NetName=NetR5_2 Pin=U2-1
+Added Pin To Net: NetName=NetR3_2 Pin=U2-2
+Added Pin To Net: NetName=NetR1_1 Pin=U2-3
+Added Pin To Net: NetName=NetR5_2 Pin=U2-5
+Added Pin To Net: NetName=NetR6_2 Pin=U2-6
+Added Pin To Net: NetName=V_PT100 Pin=U2-7

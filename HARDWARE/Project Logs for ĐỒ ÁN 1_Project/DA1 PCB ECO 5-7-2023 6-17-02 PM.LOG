@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=RXD Pin=C14-1
+Removed Pin From Net: NetName=TXD Pin=C14-2
+Removed Member From Class: ClassName=Schematic_new Member=C14
+Added Room: Name=Schematic_new

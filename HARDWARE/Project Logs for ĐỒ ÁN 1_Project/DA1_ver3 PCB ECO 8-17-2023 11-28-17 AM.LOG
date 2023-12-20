@@ -1,0 +1,14 @@
+Added Component: Designator=LCD1(LCD16X2N)
+Add component (AddParameter): Name = "Value"; Value = "LCD16x2A"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=LCD1-1
+Added Pin To Net: NetName=VCC Pin=LCD1-2
+Added Pin To Net: NetName=VS_LCD Pin=LCD1-3
+Added Pin To Net: NetName=RS_LCD Pin=LCD1-4
+Added Pin To Net: NetName=RW_LCD Pin=LCD1-5
+Added Pin To Net: NetName=ENABLE Pin=LCD1-6
+Added Pin To Net: NetName=P0_4 Pin=LCD1-11
+Added Pin To Net: NetName=P0_5 Pin=LCD1-12
+Added Pin To Net: NetName=P0_6 Pin=LCD1-13
+Added Pin To Net: NetName=P0_7 Pin=LCD1-14
+Added Member To Class: ClassName=Schematic_new Member=Component LCD1 LCD16x2A
+Added Room: Name=Schematic_new

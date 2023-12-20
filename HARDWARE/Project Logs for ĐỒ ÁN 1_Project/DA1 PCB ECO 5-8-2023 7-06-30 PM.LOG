@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=L1 Old Footprint=L-SMD-M-12x10 New Footprint=L-SMD-M-7.3x4.5
+Change Component Comment : Designator=L1 Old Comment=33mH New Comment=33uH
+Added Member To Class: ClassName=Schematic_new Member=Component JP2 JP8
+Added Member To Class: ClassName=Schematic_new Member=Component JP3 JP4
+Added Member To Class: ClassName=Schematic_new Member=Component SW1 SW
+Added Room: Name=Schematic_new

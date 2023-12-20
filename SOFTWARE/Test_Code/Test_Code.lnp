@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"delay.obj" 
+TO "Test_Code" 
+RAMSIZE(256) 

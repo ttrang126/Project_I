@@ -1,0 +1,150 @@
+C51 COMPILER V9.60.7.0   LCD_NEW                                                           06/20/2023 18:39:14 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE LCD_NEW
+OBJECT MODULE PLACED IN .\Objects\LCD_new.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE LCD_new.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\L
+                    -CD_new.lst) TABS(2) OBJECT(.\Objects\LCD_new.obj)
+
+line level    source
+
+   1          #include <REGX51.H>
+   2          
+   3          sfr LCD = 0x80;
+   4          sbit RS = P0^0;
+   5          sbit RW = P0^1;
+   6          sbit EN = P0^2;
+   7          void delay(unsigned int ms)
+   8          {
+   9   1          int i,j;
+  10   1          for(i = 0; i < ms; i++)
+  11   1          {
+  12   2              for(j = 0; j < 123; j++);
+  13   2      
+  14   2          }
+  15   1      }
+  16          
+  17          void sendHigh(unsigned char Data){
+  18   1          LCD = LCD & 0x0F; // XOA 4 BIT CA0 VA GIU LAI 4 BIT THAP
+  19   1        LCD |= ( Data & 0xF0 );// LAY 4 BIT CAO
+  20   1      }
+  21          
+  22          void sendLow(unsigned char Data)
+  23          {
+  24   1          LCD = LCD & (0x0F);
+  25   1          LCD = LCD | (Data << 4); // LAY 4 BIT THAP CUA DATA
+  26   1      }
+  27          
+  28          void LCD_Enable(void)
+  29          {
+  30   1          EN = 0; // LCD NHAN DU LIEU
+  31   1          delay(3);
+  32   1          EN = 1; // LCD NGUWNG NHAN DU LIEU
+  33   1          delay(1);
+  34   1      
+  35   1      }
+  36          
+  37          void sendCMD(unsigned char cmd)
+  38          
+  39          {
+  40   1          RW = 0; // LCD O CHE DO WRITE
+  41   1          RS = 1; //LCD GUI LENH
+  42   1          
+  43   1          sendHigh(cmd);
+  44   1          LCD_Enable();
+  45   1          sendLow(cmd);
+  46   1          LCD_Enable();
+  47   1      }
+  48          
+  49          void sendData(unsigned char Data)
+  50          {
+  51   1          RW = 0; // LCD WRITE
+  52   1          RS = 1; // LCD GUI DATA
+  53   1      
+  54   1          sendHigh(Data);
+C51 COMPILER V9.60.7.0   LCD_NEW                                                           06/20/2023 18:39:14 PAGE 2   
+
+  55   1          LCD_Enable();
+  56   1          sendLow(Data);
+  57   1          LCD_Enable();
+  58   1      }
+  59          
+  60          void LCD_Init(void)
+  61          {
+  62   1          delay(50); // LCD ON
+  63   1          sendCMD(0x01); // xoa toan bo noi dung tren LCD 
+  64   1          delay(5);
+  65   1          sendCMD(0x02); // di chuyen con tro ve phia dau man hinh
+  66   1          delay(5);
+  67   1          sendCMD(0x28); // Giao tiep 4bit, hien thi 2 dong, kich thuoc 5x7
+  68   1          delay(5);
+  69   1          sendCMD(0x06); // Tu dong tanwg Cursoe den vi tri tiep thep
+  70   1          delay(5);
+  71   1          sendCMD(0x0C); // LCD ON Cursor OFF
+  72   1          delay(5);
+  73   1          sendCMD(0x0E); // LCD ON Cursor ON
+  74   1          delay(5);
+  75   1          sendCMD(0x80); // di chuyen Cursor ve dau dong 1
+  76   1          delay(5);
+  77   1          sendCMD(0xC0); // di chuyen Cursor ve dau dong 2
+  78   1          delay(5);
+  79   1      }
+  80          
+  81          // void LCD_clear(void);
+  82          // {
+  83          //     sendCMD(0x01);
+  84          // }
+  85          
+  86          void SetCursor(unsigned short x, unsigned short y)
+  87          {
+  88   1          if(y == 0) 
+  89   1          {
+  90   2              sendCMD((x & 0x0F) | 0x80);
+  91   2          }
+  92   1          else if(y == 1)
+  93   1              sendCMD((x & 0x0F) | 0xC0);
+  94   1      }
+  95          
+  96          void printChar(char c)
+  97          {
+  98   1          sendData(c);
+  99   1      }
+ 100          
+ 101          void printString(char *c)
+ 102          {
+ 103   1          while(*c)
+ 104   1          {
+ 105   2              printChar(*c++);
+ 106   2          }
+ 107   1      }
+ 108          
+ 109          void main()
+ 110          {
+ 111   1          LCD_Init();                   //Khoi tao LCD
+ 112   1      
+ 113   1                delay(1000);
+ 114   1      
+ 115   1                printString("Luong beo"); // g?i chu?i lên LCD
+ 116   1      
+C51 COMPILER V9.60.7.0   LCD_NEW                                                           06/20/2023 18:39:14 PAGE 3   
+
+ 117   1                delay(1000);
+ 118   1      
+ 119   1      
+ 120   1      
+ 121   1      }
+ 122          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    251    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

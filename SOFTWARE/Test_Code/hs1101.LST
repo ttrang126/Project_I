@@ -1,0 +1,57 @@
+C51 COMPILER V9.01   HS1101                                                                07/05/2023 13:52:47 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE HS1101
+OBJECT MODULE PLACED IN hs1101.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE hs1101.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "hs1101.h"
+   3          #include "delay.h"
+   4          #include "port.h"
+*** ERROR C141 IN LINE 6 OF PORT.H: syntax error near 'sfr'
+   5          
+   6          code int hs1101[101] = {
+   7                                                          7507, 7494, 7481, 7468, 7455, 7442, 7429, 7416, 7403, 7390, 
+   8                                                          7377, 7364, 7351, 7338, 7325, 7312, 7299, 7286, 7273, 7260, 
+   9                                                          7247, 7234, 7221, 7208, 7195, 7182, 7169, 7156, 7143, 7130, 
+  10                                                          7117, 7104, 7091, 7078, 7065, 7052, 7039, 7026, 7013, 7000, 
+  11                                                          6987, 6974, 6961, 6948, 6935, 6922, 6909, 6896, 6883, 6870, 
+  12                                                          6857, 6844, 6831, 6818, 6805, 6792, 6779, 6766, 6753, 6740, 
+  13                                                          6727, 6714, 6701, 6688, 6675, 6662, 6649, 6636, 6623, 6610, 
+  14                                                          6597, 6584, 6571, 6558, 6545, 6532, 6519, 6506, 6493, 6480, 
+  15                                                          6467, 6454, 6441, 6428, 6415, 6402, 6389, 6376, 6363, 6350, 
+  16                                                          6337, 6324, 6311, 6298, 6285, 6272, 6259, 6246, 6233, 6220, 6207
+  17                                                          };
+  18          
+  19          unsigned int Freq(void) 
+  20          {
+  21   1              unsigned int pulses = 0;
+  22   1              TMOD = 0x51;
+  23   1              //HS1101 = 0xFF;
+  24   1              TL1 = 0;
+  25   1              TH1 = 0;
+  26   1              TR1 = 1;
+  27   1              delay(100);
+  28   1              TR1 = 0;
+  29   1              pulses = (TH1 * (0x100)) + TL1;
+  30   1              pulses = pulses * 10;
+  31   1              return pulses;
+  32   1      }
+  33                                                     
+  34          
+  35          unsigned short Humd(unsigned int Frequency)
+  36          {
+  37   1              int i;
+  38   1              for (i = 0; i < 101; i++) 
+  39   1              {
+  40   2                      if((Frequency) <= hs1101[i] && Frequency > hs1101[i+1]) return i;
+  41   2              }       
+  42   1              return 100;
+  43   1      }
+  44          
+  45          
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

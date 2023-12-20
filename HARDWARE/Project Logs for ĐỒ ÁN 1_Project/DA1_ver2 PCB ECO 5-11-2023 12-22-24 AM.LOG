@@ -1,0 +1,18 @@
+Added Component: Designator=U4(SOIC127P599X175-8N)
+Add component (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "TLC555IDR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOIC-8 Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/TLC555IDR/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/TLC555IDR/Texas%20Instruments/view-part/46238/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U4-1
+Added Pin To Net: NetName=Net1_2 Pin=U4-2
+Added Pin To Net: NetName=NetR17_1 Pin=U4-3
+Added Pin To Net: NetName=VCC Pin=U4-4
+Added Pin To Net: NetName=NetR22_2 Pin=U4-5
+Added Pin To Net: NetName=Net1_2 Pin=U4-6
+Added Pin To Net: NetName=NetR16_2 Pin=U4-7
+Added Pin To Net: NetName=VCC Pin=U4-8
+Added Member To Class: ClassName=Schematic_new Member=Component U4 TLC555IDR

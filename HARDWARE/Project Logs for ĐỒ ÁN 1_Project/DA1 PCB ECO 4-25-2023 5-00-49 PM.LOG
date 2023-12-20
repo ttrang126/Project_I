@@ -1,0 +1,46 @@
+Removed Pin From Net: NetName=GND Pin=LCD1-1
+Removed Pin From Net: NetName=VCC Pin=LCD1-2
+Removed Pin From Net: NetName=VCC Pin=LCD1-15
+Removed Pin From Net: NetName=GND Pin=LCD1-16
+Removed Member From Class: ClassName=Schematic_new Member=LCD1
+Change Component Comment : Designator=C7 Old Comment=10uF/50V New Comment=10uF/16V
+Change Component Comment : Designator=C8 Old Comment=10uF/50V New Comment=10uF/16V
+Change Component Comment : Designator=C9 Old Comment=Cap Pol New Comment=10uF/16V
+Change Component Comment : Designator=C10 Old Comment=Cap Pol New Comment=10uF/16V
+Added Component: Designator=C15(C3MM)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "POLAR0.8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=JP2(CON8)
+Add component (AddParameter): Name = "Value"; Value = "Connector 8"; VariantName = "[No Variations]"
+Added Component: Designator=JP3(CON4)
+Add component (AddParameter): Name = "Value"; Value = "Connector 4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=C15-1
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=P0_4 Pin=JP2-1
+Added Pin To Net: NetName=P0_5 Pin=JP2-2
+Added Pin To Net: NetName=P0_6 Pin=JP2-3
+Added Pin To Net: NetName=P0_7 Pin=JP2-4
+Added Pin To Net: NetName=VCC Pin=JP3-1
+Added Pin To Net: NetName=GND Pin=JP3-2
+Added Pin To Net: NetName=VCC Pin=JP3-3
+Added Pin To Net: NetName=GND Pin=JP3-4
+Change Net Name : Old Net Name=P0_1 New Net Name=RS 
+Added Pin To Net: NetName=ENABLE Pin=JP2-7
+Added Pin To Net: NetName=ENABLE Pin=RN1-5
+Added Pin To Net: NetName=ENABLE Pin=U5-34
+Added Net: Name=ENABLE
+Added Pin To Net: NetName=RS Pin=JP2-5
+Added Net: Name=RS
+Added Pin To Net: NetName=RW Pin=JP2-6
+Added Pin To Net: NetName=RW Pin=RN1-4
+Added Pin To Net: NetName=RW Pin=U5-35
+Added Net: Name=RW
+Added Pin To Net: NetName=VS Pin=JP2-8
+Added Pin To Net: NetName=VS Pin=VR2-2
+Added Net: Name=VS
+Added Member To Class: ClassName=Schematic_new Member=Component C15 0.1uF
+Added Member To Class: ClassName=Schematic_new Member=Component JP2 JP8
+Added Member To Class: ClassName=Schematic_new Member=Component JP3 JP4

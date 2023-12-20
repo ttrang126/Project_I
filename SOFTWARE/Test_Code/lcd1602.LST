@@ -1,0 +1,150 @@
+C51 COMPILER V9.01   LCD1602                                                               07/05/2023 13:55:07 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD1602
+OBJECT MODULE PLACED IN lcd1602.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcd1602.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "lcd1602.h" 
+   3          #include "port.h"
+   4          #include "delay.h"
+   5          
+   6          void sendHighNibble (unsigned char Data)        //Send upper nibble
+   7          {
+*** ERROR C132 IN LINE 7 OF LCD1602.C: '_sendHighNibble': not in formal parameter list
+*** ERROR C141 IN LINE 7 OF LCD1602.C: syntax error near '{'
+   8                  LCD = (LCD & 0x0F);
+*** ERROR C136 IN LINE 8 OF LCD1602.C: 'LCD': 'void' on variable
+*** ERROR C244 IN LINE 8 OF LCD1602.C: 'LCD': can't initialize, bad type or class
+*** ERROR C136 IN LINE 8 OF LCD1602.C: 'LCD': 'void' on variable
+*** ERROR C132 IN LINE 8 OF LCD1602.C: 'LCD': not in formal parameter list
+   9                  LCD |= (Data & 0xF0);
+*** ERROR C132 IN LINE 9 OF LCD1602.C: 'LCD': not in formal parameter list
+*** ERROR C141 IN LINE 9 OF LCD1602.C: syntax error near '|='
+  10          }
+  11          
+  12          void sendLowNibble (unsigned char Data)         //Send lower nibble
+  13          {
+*** ERROR C132 IN LINE 13 OF LCD1602.C: '_sendLowNibble': not in formal parameter list
+*** ERROR C141 IN LINE 13 OF LCD1602.C: syntax error near '{'
+  14                  LCD = (LCD & 0x0F);
+*** ERROR C244 IN LINE 14 OF LCD1602.C: 'LCD': can't initialize, bad type or class
+*** ERROR C132 IN LINE 14 OF LCD1602.C: 'LCD': not in formal parameter list
+  15                  LCD |= (Data << 4);
+*** ERROR C132 IN LINE 15 OF LCD1602.C: 'LCD': not in formal parameter list
+*** ERROR C141 IN LINE 15 OF LCD1602.C: syntax error near '|='
+  16          }
+  17          
+  18          void LCD_Command (char Cmnd)
+  19          {
+*** ERROR C132 IN LINE 19 OF LCD1602.C: '_LCD_Command': not in formal parameter list
+*** ERROR C141 IN LINE 19 OF LCD1602.C: syntax error near '{'
+  20                  RS = 0;                                 //Send Command 
+*** ERROR C244 IN LINE 20 OF LCD1602.C: 'RS': can't initialize, bad type or class
+*** ERROR C132 IN LINE 20 OF LCD1602.C: 'RS': not in formal parameter list
+  21                  RW = 0;                                 //Write operation
+*** ERROR C244 IN LINE 21 OF LCD1602.C: 'RW': can't initialize, bad type or class
+*** ERROR C132 IN LINE 21 OF LCD1602.C: 'RW': not in formal parameter list
+  22          
+  23                  sendHighNibble(Cmnd);
+*** ERROR C132 IN LINE 23 OF LCD1602.C: '_sendHighNibble': not in formal parameter list
+  24                  EN = 1;
+*** ERROR C244 IN LINE 24 OF LCD1602.C: 'EN': can't initialize, bad type or class
+*** ERROR C132 IN LINE 24 OF LCD1602.C: 'EN': not in formal parameter list
+  25                  delay(1);
+*** ERROR C141 IN LINE 25 OF LCD1602.C: syntax error near '1'
+*** ERROR C132 IN LINE 25 OF LCD1602.C: 'delay': not in formal parameter list
+  26                  EN = 0; 
+*** ERROR C244 IN LINE 26 OF LCD1602.C: 'EN': can't initialize, bad type or class
+*** ERROR C132 IN LINE 26 OF LCD1602.C: 'EN': not in formal parameter list
+  27                  delay(2);
+*** ERROR C141 IN LINE 27 OF LCD1602.C: syntax error near '2'
+C51 COMPILER V9.01   LCD1602                                                               07/05/2023 13:55:07 PAGE 2   
+
+*** ERROR C132 IN LINE 27 OF LCD1602.C: 'delay': not in formal parameter list
+  28          
+  29                  sendLowNibble(Cmnd);
+*** ERROR C132 IN LINE 29 OF LCD1602.C: '_sendLowNibble': not in formal parameter list
+  30                  EN = 1;
+*** ERROR C244 IN LINE 30 OF LCD1602.C: 'EN': can't initialize, bad type or class
+*** ERROR C132 IN LINE 30 OF LCD1602.C: 'EN': not in formal parameter list
+  31                  delay(1);
+*** ERROR C141 IN LINE 31 OF LCD1602.C: syntax error near '1'
+*** ERROR C132 IN LINE 31 OF LCD1602.C: 'delay': not in formal parameter list
+  32                  EN = 0; 
+*** ERROR C244 IN LINE 32 OF LCD1602.C: 'EN': can't initialize, bad type or class
+*** ERROR C132 IN LINE 32 OF LCD1602.C: 'EN': not in formal parameter list
+  33                  delay(5);
+*** ERROR C141 IN LINE 33 OF LCD1602.C: syntax error near '5'
+*** ERROR C132 IN LINE 33 OF LCD1602.C: 'delay': not in formal parameter list
+  34          }
+*** ERROR C141 IN LINE 34 OF LCD1602.C: syntax error near '}'
+  35          
+  36          void LCD_Data (char Data)
+  37          {
+  38   1              RS = 1;                                   //Send Data
+  39   1              RW = 0;                                   //Write Operation
+  40   1      
+  41   1              sendHighNibble(Data);
+  42   1              EN = 1;
+  43   1              delay(1);
+  44   1              EN = 0;
+  45   1              delay(2);
+  46   1      
+  47   1              sendLowNibble(Data);
+  48   1              EN = 1;
+  49   1              delay(1);
+  50   1              EN = 0;
+  51   1              delay(5);
+  52   1      }
+  53          
+  54          void LCD_Clear()                                
+  55          {
+  56   1              LCD_Command(0x01);
+  57   1      }
+  58          
+  59          void setCursor(unsigned char row, unsigned char pos)    //Setting up the position of the cursor to LCD1602
+  60          {
+  61   1              if(row == 0) 
+  62   1                      LCD_Command((pos & 0x0F)|0x80); 
+  63   1              else if(row == 1)
+  64   1                      LCD_Command ((pos & 0x0F|0xC0));
+  65   1      }
+  66          
+  67          void LCD_Char(char c)             //Print char
+  68          {
+  69   1              LCD_Data(c);
+  70   1      }
+  71          
+  72          void LCD_String(char *str)        //Print string
+  73          {
+  74   1              while(*str) 
+  75   1              {
+  76   2                      LCD_Char(*str);
+  77   2                      str++;
+  78   2              }
+C51 COMPILER V9.01   LCD1602                                                               07/05/2023 13:55:07 PAGE 3   
+
+  79   1      }
+  80          
+  81          void LCD_Init()
+  82          {
+  83   1              delay(20);
+  84   1              LCD_Command(0x02);                      //4bit mode
+  85   1              delay(10);
+  86   1              LCD_Command(0x28);                      //Initialization of 16x2LCD in 4bit mode
+  87   1              delay(10);
+  88   1              LCD_Command(0x0C);                      //Display ON Curosr OFF
+  89   1              delay(10);
+  90   1              LCD_Command(0x06);                      //Auto Increment cursor
+  91   1              delay(10);
+  92   1              LCD_Clear();                            
+  93   1              delay(10);
+  94   1              LCD_Command(0x80);                      //Cursor at home position
+  95   1              delay(10);
+  96   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  39 ERROR(S)

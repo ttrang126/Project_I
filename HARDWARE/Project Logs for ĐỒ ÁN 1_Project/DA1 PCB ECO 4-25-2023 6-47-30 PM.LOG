@@ -1,0 +1,83 @@
+Removed Pin From Net: NetName=NetRN1_2 Pin=RN1-2
+Removed Pin From Net: NetName=RS  Pin=RN1-3
+Removed Pin From Net: NetName=ADC5 Pin=U5-1
+Removed Pin From Net: NetName=ADC6 Pin=U5-2
+Removed Pin From Net: NetName=ADC7 Pin=U5-3
+Removed Pin From Net: NetName=RST Pin=U5-4
+Removed Pin From Net: NetName=RXD Pin=U5-5
+Removed Pin From Net: NetName=TXD Pin=U5-7
+Removed Pin From Net: NetName=INTR_ADC Pin=U5-8
+Removed Pin From Net: NetName=WR_ADC Pin=U5-9
+Removed Pin From Net: NetName=RD_ADC Pin=U5-10
+Removed Pin From Net: NetName=HS1101_COUNTER Pin=U5-11
+Removed Pin From Net: NetName=XTAL 1 Pin=U5-14
+Removed Pin From Net: NetName=XTAL 2 Pin=U5-15
+Removed Pin From Net: NetName=GND Pin=U5-16
+Removed Pin From Net: NetName=GND Pin=U5-17
+Removed Pin From Net: NetName=P2_0 Pin=U5-18
+Removed Pin From Net: NetName=P2_1 Pin=U5-19
+Removed Pin From Net: NetName=P2_2 Pin=U5-20
+Removed Pin From Net: NetName=P2_3 Pin=U5-21
+Removed Pin From Net: NetName=P2_4 Pin=U5-22
+Removed Pin From Net: NetName=P2_5 Pin=U5-23
+Removed Pin From Net: NetName=P2_6 Pin=U5-24
+Removed Pin From Net: NetName=P2_7 Pin=U5-25
+Removed Pin From Net: NetName=VCC Pin=U5-29
+Removed Pin From Net: NetName=P0_7 Pin=U5-30
+Removed Pin From Net: NetName=P0_6 Pin=U5-31
+Removed Pin From Net: NetName=P0_5 Pin=U5-32
+Removed Pin From Net: NetName=P0_4 Pin=U5-33
+Removed Pin From Net: NetName=ENABLE Pin=U5-34
+Removed Pin From Net: NetName=RS  Pin=U5-36
+Removed Pin From Net: NetName=NetRN1_2 Pin=U5-37
+Removed Pin From Net: NetName=VCC Pin=U5-38
+Removed Pin From Net: NetName=ADC0 Pin=U5-40
+Removed Member From Class: ClassName=Schematic_new Member=U5
+Added Component: Designator=IC?(DIP40/W0.6)
+Add component (AddParameter): Name = "Value"; Value = "AT89C52"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=ADC0 Pin=IC?-1
+Added Pin To Net: NetName=ADC1 Pin=IC?-2
+Added Pin To Net: NetName=ADC2 Pin=IC?-3
+Added Pin To Net: NetName=ADC3 Pin=IC?-4
+Added Pin To Net: NetName=ADC4 Pin=IC?-5
+Added Pin To Net: NetName=ADC5 Pin=IC?-6
+Added Pin To Net: NetName=ADC6 Pin=IC?-7
+Added Pin To Net: NetName=ADC7 Pin=IC?-8
+Added Pin To Net: NetName=RST Pin=IC?-9
+Added Pin To Net: NetName=RXD Pin=IC?-10
+Added Pin To Net: NetName=TXD Pin=IC?-11
+Added Pin To Net: NetName=INTR_ADC Pin=IC?-12
+Added Pin To Net: NetName=WR_ADC Pin=IC?-13
+Added Pin To Net: NetName=RD_ADC Pin=IC?-14
+Added Pin To Net: NetName=HS1101_COUNTER Pin=IC?-15
+Added Pin To Net: NetName=XTAL 1 Pin=IC?-18
+Added Pin To Net: NetName=XTAL 2 Pin=IC?-19
+Added Pin To Net: NetName=GND Pin=IC?-20
+Added Pin To Net: NetName=P2_0 Pin=IC?-21
+Added Pin To Net: NetName=P2_1 Pin=IC?-22
+Added Pin To Net: NetName=P2_2 Pin=IC?-23
+Added Pin To Net: NetName=P2_3 Pin=IC?-24
+Added Pin To Net: NetName=P2_4 Pin=IC?-25
+Added Pin To Net: NetName=P2_5 Pin=IC?-26
+Added Pin To Net: NetName=P2_6 Pin=IC?-27
+Added Pin To Net: NetName=P2_7 Pin=IC?-28
+Added Pin To Net: NetName=VCC Pin=IC?-31
+Added Pin To Net: NetName=P0_7 Pin=IC?-32
+Added Pin To Net: NetName=P0_6 Pin=IC?-33
+Added Pin To Net: NetName=P0_5 Pin=IC?-34
+Added Pin To Net: NetName=P0_4 Pin=IC?-35
+Added Pin To Net: NetName=ENABLE Pin=IC?-36
+Added Pin To Net: NetName=NetRN1_2 Pin=IC?-37
+Added Pin To Net: NetName=RS Pin=IC?-38
+Added Pin To Net: NetName=RS  Pin=IC?-39
+Added Pin To Net: NetName=VCC Pin=IC?-40
+Added Pin To Net: NetName=NetRN1_2 Pin=JP2-6
+Added Pin To Net: NetName=RS  Pin=RN1-2
+Added Pin To Net: NetName=RS Pin=RN1-3
+Added Pin To Net: NetName=NetRN1_2 Pin=RN1-4
+Change Net Name : Old Net Name=NetRN1_2 New Net Name=RW_LCD
+Change Net Name : Old Net Name=RS  New Net Name=NetIC?_39
+Change Net Name : Old Net Name=RS New Net Name=RS_LCD
+Change Net Name : Old Net Name=VS New Net Name=VS_LCD
+Added Member To Class: ClassName=Schematic_new Member=Component IC? AT89C52
+Added Room: Name=Schematic_new

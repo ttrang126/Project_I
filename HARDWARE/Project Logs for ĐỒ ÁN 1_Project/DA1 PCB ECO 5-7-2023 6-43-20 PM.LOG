@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=RXD Pin=J2-1
+Added Pin To Net: NetName=TXD Pin=J2-2
+Added Room: Name=Schematic_new

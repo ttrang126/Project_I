@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=NetR24_2 Pin=R24-2
+Added Pin To Net: NetName=NetR24_2 Pin=R25-1
+Added Net: Name=NetR24_2
+Added Pin To Net: NetName=NetR25_2 Pin=R25-2
+Added Pin To Net: NetName=NetR25_2 Pin=R26-1
+Added Net: Name=NetR25_2
+Added Room: Name=Schematic_new

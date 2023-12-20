@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=P2_7 Pin=JP1-1
+Removed Pin From Net: NetName=P2_6 Pin=JP1-2
+Removed Pin From Net: NetName=P2_5 Pin=JP1-3
+Removed Pin From Net: NetName=P2_4 Pin=JP1-4
+Removed Pin From Net: NetName=P2_3 Pin=JP1-5
+Removed Pin From Net: NetName=P2_2 Pin=JP1-6
+Removed Pin From Net: NetName=P2_1 Pin=JP1-7
+Removed Pin From Net: NetName=P2_0 Pin=JP1-8
+Removed Member From Class: ClassName=Schematic_new Member=JP1
+Added Component: Designator=JP2(CON8)
+Add component (AddParameter): Name = "Value"; Value = "Connector 8"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=P2_7 Pin=JP2-1
+Added Pin To Net: NetName=P2_6 Pin=JP2-2
+Added Pin To Net: NetName=P2_5 Pin=JP2-3
+Added Pin To Net: NetName=P2_4 Pin=JP2-4
+Added Pin To Net: NetName=P2_3 Pin=JP2-5
+Added Pin To Net: NetName=P2_2 Pin=JP2-6
+Added Pin To Net: NetName=P2_1 Pin=JP2-7
+Added Pin To Net: NetName=P2_0 Pin=JP2-8
+Added Member To Class: ClassName=Schematic_new Member=Component JP2
+Added Room: Name=Schematic_new

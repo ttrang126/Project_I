@@ -1,0 +1,5 @@
+Added Component: Designator=L1(L-SMD-M-7.3x4.5)
+Add component (AddParameter): Name = "Value"; Value = "150 mH"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_2 Pin=L1-1
+Added Pin To Net: NetName=VCC Pin=L1-2
+Added Member To Class: ClassName=Schematic_new Member=Component L1 33uH

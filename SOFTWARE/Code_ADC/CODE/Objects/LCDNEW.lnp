@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\LCD_new.obj" 
+TO ".\Objects\LCDNEW" 
+PRINT(".\Listings\LCDNEW.m51") RAMSIZE(256) 

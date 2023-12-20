@@ -1,0 +1,310 @@
+C51 COMPILER V9.01   LCD                                                                   08/18/2023 09:22:05 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN .\Objects\LCD.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE LCD.c BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\LCD.lst) OBJECT(.\Objects\
+                    -LCD.obj)
+
+line level    source
+
+   1          #include <REGX51.H>
+   2          #include <stdio.h>
+   3          
+   4          sfr LCD = 0x80;
+   5          sbit RS = P0^1;
+   6          sbit RW = P0^2;
+   7          sbit EN = P0^3;
+   8          sbit A = P2^1;
+   9          sfr ADC0804_Data = 0x90;
+  10          sbit ADC0804_RD = P3^4;
+  11          sbit ADC0804_WR = P3^3;
+  12          sbit ADC0804_INTR = P3^2;
+  13          sbit HS = P3^5;
+  14          
+  15          void delay(unsigned int ms)
+  16          {
+  17   1          int i,j;
+  18   1          for(i = 0; i < ms; i++)
+  19   1          {
+  20   2              for(j = 0; j < 123; j++);
+  21   2      
+  22   2          }
+  23   1      }
+  24          
+  25          code int hs1101[101] = {
+  26                                                          7351, 7338, 7325, 7312, 7299, 7286, 7273, 7260, 7247, 7234, 
+  27                                                          7221, 7208, 7195, 7182, 7169, 7156, 7143, 7130, 7117, 7104, 
+  28                                                          7091, 7078, 7065, 7052, 7039, 7026, 7013, 7000, 6987, 6974, 
+  29                                                          6961, 6948, 6935, 6922, 6909, 6896, 6883, 6870, 6857, 6844, 
+  30                                                          6831, 6818, 6805, 6792, 6779, 6766, 6753, 6740, 6727, 6714, 
+  31                                                          6701, 6688, 6675, 6662, 6649, 6636, 6623, 6610, 6597, 6584, 
+  32                                                          6571, 6558, 6545, 6532, 6519, 6506, 6493, 6480, 6467, 6454, 
+  33                                                          6441, 6428, 6415, 6402, 6389, 6376, 6363, 6350, 6337, 6324, 
+  34                                                          6311, 6298, 6285, 6272, 6259, 6246, 6233, 6220, 6207, 6194, 
+  35                                                          6181, 6168, 6155, 6142, 6129, 6116, 6103, 6090, 6077, 6064, 6051
+  36                                                          };
+  37          
+  38          unsigned int Freq(void) 
+  39          {
+  40   1      
+  41   1              unsigned int pulses = 0;
+  42   1              TMOD = 0x51;
+  43   1              HS = 1;
+  44   1              TL1 = 0;
+  45   1              TH1 = 0;
+  46   1              TR1 = 1;
+  47   1              delay(100);
+  48   1              TR1 = 0;
+  49   1              pulses = (TH1 * (0x100)) + TL1;
+  50   1              pulses = pulses * 10;
+  51   1              return pulses;
+  52   1      }
+  53                                                     
+  54          
+C51 COMPILER V9.01   LCD                                                                   08/18/2023 09:22:05 PAGE 2   
+
+  55          unsigned short Humd(unsigned int Frequency)
+  56          {
+  57   1              int i;
+  58   1              for (i = 0; i < 101; i++) 
+  59   1              {
+  60   2                      if((Frequency) > hs1101[i]) return i;
+  61   2              }       
+  62   1              return 100;
+  63   1      }
+  64          
+  65          unsigned char ADC0804_Read(void)
+  66          {
+  67   1              unsigned char result;
+  68   1              
+  69   1              
+  70   1              ADC0804_WR = 0;
+  71   1              ADC0804_WR = 1;
+  72   1              
+  73   1              while(ADC0804_INTR);
+  74   1              
+  75   1              ADC0804_RD = 0;
+  76   1              result = ADC0804_Data;
+  77   1              ADC0804_RD = 1;
+  78   1              
+  79   1              
+  80   1              return result;
+  81   1      }
+  82          
+  83          float Cal_Temp(unsigned int ADC_Value)
+  84          {
+  85   1              float Temperature = 0.0;
+  86   1              unsigned int frac = 0;
+  87   1              unsigned int temp = 0;
+  88   1        if (ADC_Value < 31)
+  89   1                      Temperature = (ADC_Value - 11) / 1.86982;
+  90   1              else if ((ADC_Value >= 31) && (ADC_Value < 54))
+  91   1                      Temperature = (ADC_Value - 31) * 0.4299966 + 5;
+  92   1              else if ((ADC_Value >= 54) && (ADC_Value < 74))
+  93   1                      Temperature = (ADC_Value - 54) * 0.49640 + 15;
+  94   1              else if ((ADC_Value >= 74) && (ADC_Value < 85))
+  95   1                      Temperature = (ADC_Value - 74) * 0.48857 + 25;
+  96   1              else if ((ADC_Value >= 85) && (ADC_Value < 97))
+  97   1                      Temperature = (ADC_Value - 85) * 0.416667 + 30;
+  98   1              else if ((ADC_Value >= 97) && (ADC_Value < 110))
+  99   1                      Temperature = (ADC_Value - 97) * 0.38461 + 35;
+ 100   1              else if ((ADC_Value >= 110) && (ADC_Value < 116))
+ 101   1                      Temperature = (ADC_Value - 110) * 1.5669 + 40;
+ 102   1              else if ((ADC_Value >= 116) && (ADC_Value < 125))
+ 103   1                      Temperature = (ADC_Value - 116) * 1.11408 + 50;
+ 104   1              else if ((ADC_Value >= 125) && (ADC_Value < 165))
+ 105   1                      Temperature = (ADC_Value - 125) * 0.37136 + 60;
+ 106   1              else if ((ADC_Value >= 165) && (ADC_Value < 173))
+ 107   1                      Temperature = (ADC_Value - 165) * 0.632511 + 75;
+ 108   1              else if ((ADC_Value >= 173) && (ADC_Value < 186))
+ 109   1                      Temperature = (ADC_Value - 173) * 0.80032 + 80;
+ 110   1              else if ((ADC_Value >= 186) && (ADC_Value < 190))
+ 111   1                      Temperature = (ADC_Value - 186) * 0.39215 + 90;
+ 112   1              else if ((ADC_Value >= 190) && (ADC_Value < 255))
+ 113   1                      Temperature = (ADC_Value - 190) * 0.424886 + 91.6;
+ 114   1              temp = (unsigned int)(Temperature * 10);
+ 115   1              Temperature = (double)temp / 10;
+ 116   1              frac = temp % 10;
+C51 COMPILER V9.01   LCD                                                                   08/18/2023 09:22:05 PAGE 3   
+
+ 117   1      
+ 118   1              if (frac < 3)
+ 119   1              {
+ 120   2                      Temperature -= (double)(frac) / 10;
+ 121   2              }
+ 122   1              else if ((frac >= 3) && (frac <= 7))
+ 123   1              {
+ 124   2                      Temperature += (5 - (double)frac) / 10;
+ 125   2              }
+ 126   1              else
+ 127   1              {
+ 128   2                      Temperature += (double)(10 - frac) / 10;
+ 129   2              }
+ 130   1              
+ 131   1              
+ 132   1        return Temperature;
+ 133   1      }
+ 134          
+ 135          
+ 136          void sendHigh(unsigned char Data){
+ 137   1          LCD = LCD & 0x0F; // XOA 4 BIT CA0 VA GIU LAI 4 BIT THAP
+ 138   1              LCD |= ( Data & 0xF0 );// LAY 4 BIT CAO
+ 139   1      }
+ 140          
+ 141          void sendLow(unsigned char Data)
+ 142          {
+ 143   1          LCD = LCD & (0x0F);
+ 144   1          LCD = LCD | (Data << 4); // LAY 4 BIT THAP CUA DATA
+ 145   1      }
+ 146          
+ 147          void LCD_Enable(void)
+ 148          {
+ 149   1          EN = 0; // LCD NHAN DU LIEU
+ 150   1          delay(3);
+ 151   1          EN = 1; // LCD NGUNG NHAN DU LIEU
+ 152   1          delay(1);
+ 153   1      
+ 154   1      }
+ 155          
+ 156          void sendCMD(unsigned char cmd)
+ 157          
+ 158          {
+ 159   1          RW = 0; // LCD O CHE DO WRITE
+ 160   1          RS = 0; //LCD GUI LENH
+ 161   1          
+ 162   1          sendHigh(cmd);
+ 163   1          LCD_Enable();
+ 164   1          sendLow(cmd);
+ 165   1          LCD_Enable();
+ 166   1      }
+ 167          
+ 168          void sendData(unsigned char Data)
+ 169          {
+ 170   1          RW = 0; // LCD WRITE
+ 171   1          RS = 1; // LCD GUI DATA
+ 172   1      
+ 173   1          sendHigh(Data);
+ 174   1          LCD_Enable();
+ 175   1          sendLow(Data);
+ 176   1          LCD_Enable();
+ 177   1      }
+ 178          
+C51 COMPILER V9.01   LCD                                                                   08/18/2023 09:22:05 PAGE 4   
+
+ 179          void LCD_Init(void)
+ 180          {
+ 181   1          delay(50); // LCD ON
+ 182   1          sendCMD(0x01); // xoa toan bo noi dung tren LCD 
+ 183   1          delay(5);
+ 184   1          sendCMD(0x02); // di chuyen con tro ve phia dau man hinh
+ 185   1          delay(5);
+ 186   1          sendCMD(0x28); // Giao tiep 4bit, hien thi 2 dong, kich thuoc 5x7
+ 187   1          delay(5);
+ 188   1          sendCMD(0x06); // Tu dong tanwg Cursoe den vi tri tiep thep
+ 189   1          delay(5);
+ 190   1          sendCMD(0x0C); // LCD ON Cursor OFF
+ 191   1          delay(5);
+ 192   1          sendCMD(0x0E); // LCD ON Cursor ON
+ 193   1          delay(5);
+ 194   1          sendCMD(0x80); // di chuyen Cursor ve dau dong 1
+ 195   1          delay(5);
+ 196   1      
+ 197   1      }
+ 198          
+ 199          void LCD_clear()
+ 200           {
+ 201   1           sendCMD(0x01);
+ 202   1       }
+ 203          
+ 204          void SetCursor(unsigned short x, unsigned short y)
+ 205          {
+ 206   1          if(y == 0) 
+ 207   1          {
+ 208   2              sendCMD((x & 0x0F) | 0x80);
+ 209   2          }
+ 210   1          else if(y == 1)
+ 211   1              sendCMD((x & 0x0F) | 0xC0); // cursor xuong dong 2
+ 212   1      }
+ 213          
+ 214          void printChar(char c)
+ 215          {
+ 216   1          sendData(c);
+ 217   1      }
+ 218          
+ 219          void printString(char *c)
+ 220          {
+ 221   1          while(*c)
+ 222   1          {
+ 223   2              printChar(*c++);
+ 224   2          }
+ 225   1      }
+ 226          
+ 227          void main()
+ 228          {
+ 229   1              
+ 230   1              unsigned int ADC_Value = 0;
+ 231   1              double Temperature = 0;
+ 232   1              unsigned char a[20];
+ 233   1              unsigned char b[20];
+ 234   1              unsigned int Frequency = 0;
+ 235   1              unsigned short Humidity =0;
+ 236   1              LCD_Init();
+ 237   1              P1 = 0xFF;      
+ 238   1              printString("Temp");
+ 239   1              delay(1000);
+ 240   1              LCD_clear();    
+C51 COMPILER V9.01   LCD                                                                   08/18/2023 09:22:05 PAGE 5   
+
+ 241   1              while(1)
+ 242   1              {
+ 243   2                           //Khoi tao LCD
+ 244   2              A = 1;
+ 245   2          ADC_Value = ADC0804_Read();
+ 246   2          Temperature = Cal_Temp(ADC_Value);
+ 247   2              SetCursor(0,0);
+ 248   2          sprintf(b, "%4.1f", Temperature);
+ 249   2          printString("Temp:");
+ 250   2          printString(b);
+ 251   2                      if(Temperature >= 10.0)
+ 252   2                      {
+ 253   3                              printChar(0xDF); // ky hieu d? C
+ 254   3                              printChar('C');
+ 255   3                      }
+ 256   2                      else
+ 257   2                      {
+ 258   3                              SetCursor(9, 0);
+ 259   3                              printChar(0xDF);
+ 260   3                              printString("C ");
+ 261   3                      }
+ 262   2                      SetCursor(0,1);
+ 263   2                      Frequency = Freq();
+ 264   2                      Humidity = Humd(Frequency);
+ 265   2                      printString("Humidity:");
+ 266   2                      sprintf(a, "%3d", Humidity);
+ 267   2                      printString(a);
+ 268   2                      printChar('%');
+ 269   2                      delay(5000);
+ 270   2                      LCD_clear();
+ 271   2              
+ 272   2              }
+ 273   1         
+ 274   1      
+ 275   1      
+ 276   1      }
+ 277          
+ 278          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1664    ----
+   CONSTANT SIZE    =    236    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      65
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

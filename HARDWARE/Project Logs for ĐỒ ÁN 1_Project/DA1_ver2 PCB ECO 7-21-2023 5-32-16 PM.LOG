@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=RXD Pin=J2-1
+Removed Pin From Net: NetName=TXD Pin=J2-2
+Removed Pin From Net: NetName=GND Pin=J2-3
+Removed Pin From Net: NetName=RXD Pin=J3-1
+Removed Pin From Net: NetName=TXD Pin=J3-2
+Removed Pin From Net: NetName=GND Pin=J3-3
+Removed Member From Class: ClassName=Schematic_new Member=J2
+Removed Member From Class: ClassName=Schematic_new Member=J3
+Added Component: Designator=JP1(CON2)
+Add component (AddParameter): Name = "Value"; Value = "Connector 2"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=RXD Pin=JP1-1
+Added Pin To Net: NetName=TXD Pin=JP1-2
+Added Member To Class: ClassName=Schematic_new Member=Component JP1 JP2
+Added Room: Name=Schematic_new

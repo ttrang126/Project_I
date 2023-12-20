@@ -1,0 +1,4 @@
+Added Member To Class: ClassName=Schematic_new Member=Component JP2
+Added Member To Class: ClassName=Schematic_new Member=Component LCD1 LCD16x2A
+Added Member To Class: ClassName=Schematic_new Member=Component VR2 10k
+Added Room: Name=Schematic_new

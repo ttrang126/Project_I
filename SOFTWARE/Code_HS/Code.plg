@@ -1,0 +1,362 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\ACER\Desktop\Project_I\Test\Code_HS\Code.uvproj
+Project File Date:  08/17/2023
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+PORT.H(7): error C146: 'P0_1': invalid base address
+PORT.H(8): error C146: 'P0_2': invalid base address
+PORT.H(9): error C146: 'P0_3': invalid base address
+PORT.H(10): error C146: 'P0_4': invalid base address
+PORT.H(11): error C146: 'P0_5': invalid base address
+PORT.H(12): error C146: 'P0_6': invalid base address
+PORT.H(13): error C146: 'P0_7': invalid base address
+PORT.H(16): error C146: 'P3_2': invalid base address
+PORT.H(17): error C146: 'P3_3': invalid base address
+PORT.H(18): error C146: 'P3_4': invalid base address
+PORT.H(20): error C146: 'P3_5': invalid base address
+compiling lcd1602.c...
+PORT.H(7): error C146: 'P0_1': invalid base address
+PORT.H(8): error C146: 'P0_2': invalid base address
+PORT.H(9): error C146: 'P0_3': invalid base address
+PORT.H(10): error C146: 'P0_4': invalid base address
+PORT.H(11): error C146: 'P0_5': invalid base address
+PORT.H(12): error C146: 'P0_6': invalid base address
+PORT.H(13): error C146: 'P0_7': invalid base address
+PORT.H(16): error C146: 'P3_2': invalid base address
+PORT.H(17): error C146: 'P3_3': invalid base address
+PORT.H(18): error C146: 'P3_4': invalid base address
+PORT.H(20): error C146: 'P3_5': invalid base address
+LCD1602.C(20): error C202: 'RS': undefined identifier
+LCD1602.C(21): error C202: 'RW': undefined identifier
+LCD1602.C(24): error C202: 'EN': undefined identifier
+LCD1602.C(26): error C202: 'EN': undefined identifier
+LCD1602.C(30): error C202: 'EN': undefined identifier
+LCD1602.C(32): error C202: 'EN': undefined identifier
+LCD1602.C(38): error C202: 'RS': undefined identifier
+LCD1602.C(39): error C202: 'RW': undefined identifier
+LCD1602.C(42): error C202: 'EN': undefined identifier
+LCD1602.C(44): error C202: 'EN': undefined identifier
+LCD1602.C(48): error C202: 'EN': undefined identifier
+LCD1602.C(50): error C202: 'EN': undefined identifier
+compiling hs1101.c...
+PORT.H(7): error C146: 'P0_1': invalid base address
+PORT.H(8): error C146: 'P0_2': invalid base address
+PORT.H(9): error C146: 'P0_3': invalid base address
+PORT.H(10): error C146: 'P0_4': invalid base address
+PORT.H(11): error C146: 'P0_5': invalid base address
+PORT.H(12): error C146: 'P0_6': invalid base address
+PORT.H(13): error C146: 'P0_7': invalid base address
+PORT.H(16): error C146: 'P3_2': invalid base address
+PORT.H(17): error C146: 'P3_3': invalid base address
+PORT.H(18): error C146: 'P3_4': invalid base address
+PORT.H(20): error C146: 'P3_5': invalid base address
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0_1': undefined identifier
+PORT.H(8): error C202: 'P0_2': undefined identifier
+PORT.H(9): error C202: 'P0_3': undefined identifier
+PORT.H(10): error C202: 'P0_4': undefined identifier
+PORT.H(11): error C202: 'P0_5': undefined identifier
+PORT.H(12): error C202: 'P0_6': undefined identifier
+PORT.H(13): error C202: 'P0_7': undefined identifier
+PORT.H(16): error C202: 'P3_2': undefined identifier
+PORT.H(17): error C202: 'P3_3': undefined identifier
+PORT.H(18): error C202: 'P3_4': undefined identifier
+PORT.H(20): error C202: 'P3_5': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+main.c(1): warning C318: can't open file '89V251Rx2.H'
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling lcd1602.c...
+lcd1602.c - 0 Error(s), 0 Warning(s).
+compiling delay.c...
+delay.c - 0 Error(s), 0 Warning(s).
+compiling hs1101.c...
+hs1101.c - 0 Error(s), 0 Warning(s).
+compiling adc0804.c...
+PORT.H(7): error C202: 'P0': undefined identifier
+PORT.H(8): error C202: 'P0': undefined identifier
+PORT.H(9): error C202: 'P0': undefined identifier
+PORT.H(10): error C202: 'P0': undefined identifier
+PORT.H(11): error C202: 'P0': undefined identifier
+PORT.H(12): error C202: 'P0': undefined identifier
+PORT.H(13): error C202: 'P0': undefined identifier
+PORT.H(16): error C202: 'P3': undefined identifier
+PORT.H(17): error C202: 'P3': undefined identifier
+PORT.H(18): error C202: 'P3': undefined identifier
+PORT.H(20): error C202: 'P3': undefined identifier
+ADC0804.C(9): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(10): error C202: 'ADC_WR': undefined identifier
+ADC0804.C(12): error C202: 'ADC_INTR': undefined identifier
+ADC0804.C(14): error C202: 'ADC_RD': undefined identifier
+ADC0804.C(16): error C202: 'ADC_RD': undefined identifier
+adc0804.c - 16 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling adc0804.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADC0804_READ?ADC0804
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CAL_TEMP?ADC0804
+Program Size: data=72.1 xdata=0 code=4711
+creating hex file from "Code"...
+"Code" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADC0804_READ?ADC0804
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CAL_TEMP?ADC0804
+Program Size: data=72.1 xdata=0 code=4711
+creating hex file from "Code"...
+"Code" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+MAIN.C(28): error C141: syntax error near ':'
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling lcd1602.c...
+compiling hs1101.c...
+compiling delay.c...
+compiling adc0804.c...
+linking...
+Program Size: data=68.1 xdata=0 code=4886
+creating hex file from "Code"...
+"Code" - 0 Error(s), 0 Warning(s).

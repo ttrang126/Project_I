@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=VR2 Old Footprint=VR New Footprint=VAR_RESISTOR
+Added Member To Class: ClassName=Schematic_new Member=Component C2 680uF
+Added Member To Class: ClassName=Schematic_new Member=Component JDC1 Jac DC
+Added Member To Class: ClassName=Schematic_new Member=Component JP2 JP8
+Added Member To Class: ClassName=Schematic_new Member=Component JP2
+Added Member To Class: ClassName=Schematic_new Member=Component R16 9.1k
+Added Room: Name=Schematic_new

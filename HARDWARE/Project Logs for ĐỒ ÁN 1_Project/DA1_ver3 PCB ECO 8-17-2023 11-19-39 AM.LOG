@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=U2-4
+Removed Pin From Net: NetName=VCC Pin=U2-11
+Added Pin To Net: NetName=VCC Pin=U2-4
+Added Pin To Net: NetName=GND Pin=U2-11
+Added Room: Name=Schematic_new

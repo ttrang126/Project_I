@@ -1,0 +1,8 @@
+"STARTUP.obj",
+"main.obj",
+"lcd1602.obj",
+"hs1101.obj",
+"delay.obj" 
+TO "Code" 
+RAMSIZE(256) 
+CODE( 0X0000-0X1FFF )
